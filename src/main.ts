@@ -1,10 +1,11 @@
 import express from "express";
-import { getAllFixtures, getOddsByFixture } from './request.js';
+import { getAllFixtures, getOddsByFixture, getFixturesByDateRange } from './request.js';
 // import { SP_Fixture, SP_OddsByFixture } from './types.js'
 
 console.log('aa');
 
 const allFixtures = await getAllFixtures();
+const fixtureByDate = await getFixturesByDateRange();
 const fixturesCount = allFixtures.length;
 
 for(let i = 0; i<fixturesCount; i++){
@@ -23,6 +24,11 @@ app.get('/', (req, res) => {
 app.get('/allFixtures', (req, res) => {
   console.log(req);
   res.send(allFixtures);
+});
+
+app.get('/fixtureByDate', (req, res) => {
+  console.log(req);
+  res.send(fixtureByDate);
 });
 
 const port = process.env.PORT || 3000;

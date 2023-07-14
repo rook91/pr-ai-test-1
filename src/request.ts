@@ -21,6 +21,20 @@ export const getAllFixtures = async () => {
   return fixtures
 }
 
+export const getFixturesByDateRange = async () => {
+  let fixtures = [];
+  const startDate = '13-07-2023';
+  const endDate = '15-07-2023';
+  try {
+    const res = await axios.get(`${webApiUrl}/fixtures/between/${startDate}/${endDate}`, { headers: {"Authorization" : t1} });
+    fixtures = res.data.data;
+  } catch (error) {
+    console.error(error);
+  }
+  
+  return fixtures
+}
+
 export const getOddsByFixture = async (id: number) => {
   let odds = [];
 
