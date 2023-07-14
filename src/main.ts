@@ -1,27 +1,22 @@
 import express from "express";
-import { getAllFixtures, getOddsByFixture } from './request.js';
+import { getAllFixtures } from './request.js';
 // import { SP_Fixture, SP_OddsByFixture } from './types.js'
 
-console.log('aa');
-
 const allFixtures = await getAllFixtures();
-const fixturesCount = allFixtures.length;
+// const fixturesCount = allFixtures.length;
 
-for(let i = 0; i<fixturesCount; i++){
-  // console.log(`${allFixtures[i].id}: ${allFixtures[i].name}`);
-  const allOdds = await getOddsByFixture(allFixtures[i].id);
-  console.log(allOdds);
-}
+// for(let i = 0; i<fixturesCount; i++){
+//   // console.log(`${allFixtures[i].id}: ${allFixtures[i].name}`);
+//   const allOdds = await getOddsByFixture(allFixtures[i].id);
+// }
 
 const app = express();
 
-app.get('/', (req, res) => {
-  console.log(req);
+app.get('/', (_req, res) => {
   res.send('Test endpoint');
 });
 
-app.get('/allFixtures', (req, res) => {
-  console.log(req);
+app.get('/allFixtures', (_req, res) => {
   res.send(allFixtures);
 });
 
