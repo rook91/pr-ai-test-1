@@ -1,13 +1,14 @@
 import axios from 'axios';
-import { readFileSync } from 'fs';
+import { testSecrets } from './sectrets.js';
+// import { readFileSync } from 'fs';
 
 const webApiUrl = 'https://api.sportmonks.com/v3/football';
 
-const loadJSON = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)).toString());
+// const loadJSON = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)).toString());
 
-const tokens = loadJSON('../mocks/TOKEN.json');
+// const tokens = loadJSON('../mocks/TOKEN.json');
 
-const t1 =  tokens.t1;
+const t1 =  await testSecrets();
 
 export const getAllFixtures = async () => {
   let fixtures = [];
