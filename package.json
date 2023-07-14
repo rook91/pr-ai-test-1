@@ -1,6 +1,6 @@
 {
   "name": "pr-ai-test-1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "gawron",
   "description": "pr-ai-test-1",
   "type": "module",
@@ -19,6 +19,7 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "@azure/identity-vscode": "^1.0.0",
     "@types/express": "^4.17.17",
     "@types/jest": "~29.5",
     "@types/node": "~18",
@@ -35,6 +36,8 @@
     "typescript": "~5.0"
   },
   "dependencies": {
+    "@azure/identity": "^3.2.3",
+    "@azure/keyvault-secrets": "^4.7.0",
     "axios": "^1.4.0",
     "express": "^4.18.2",
     "tslib": "~2.5"
