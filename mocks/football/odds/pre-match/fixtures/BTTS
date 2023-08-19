@@ -1,0 +1,82 @@
+{
+    "data": [
+        {
+            "id": 30366716029,
+            "fixture_id": 18841810,
+            "market_id": 14,
+            "bookmaker_id": 2,
+            "label": "No",
+            "value": "1.67",
+            "name": "No",
+            "sort_order": null,
+            "market_description": "Both Teams to Score",
+            "probability": "60.02%",
+            "dp3": "1.666",
+            "fractional": "5/3",
+            "american": "-151",
+            "winning": false,
+            "stopped": false,
+            "total": null,
+            "handicap": null,
+            "participants": null,
+            "created_at": "2023-07-05T06:20:41.000000Z",
+            "updated_at": "2023-07-14T17:10:47.000000Z",
+            "original_label": null,
+            "latest_bookmaker_update": "2023-07-14 17:10:47"
+        },
+        {
+            "id": 30366716028,
+            "fixture_id": 18841810,
+            "market_id": 14,
+            "bookmaker_id": 2,
+            "label": "Yes",
+            "value": "2.10",
+            "name": "Yes",
+            "sort_order": null,
+            "market_description": "Both Teams to Score",
+            "probability": "47.62%",
+            "dp3": "2.100",
+            "fractional": "21/10",
+            "american": "110",
+            "winning": false,
+            "stopped": false,
+            "total": null,
+            "handicap": null,
+            "participants": null,
+            "created_at": "2023-07-05T06:20:41.000000Z",
+            "updated_at": "2023-07-14T17:10:47.000000Z",
+            "original_label": null,
+            "latest_bookmaker_update": "2023-07-14 17:10:47"
+        }
+    ],
+    "subscription": [
+        {
+            "meta": {
+                "trial_ends_at": "2023-07-27 09:21:19",
+                "ends_at": "2023-08-13 08:25:33"
+            },
+            "plans": [
+                {
+                    "plan": "European Plan",
+                    "sport": "Football",
+                    "category": "Standard"
+                }
+            ],
+            "add_ons": [
+                {
+                    "add_on": "European Club Tournaments",
+                    "sport": "Football",
+                    "category": "Plan"
+                }
+            ],
+            "widgets": [
+            ]
+        }
+    ],
+    "rate_limit": {
+        "resets_in_seconds": 3463,
+        "remaining": 2996,
+        "requested_entity": "Odd"
+    },
+    "timezone": "UTC"
+}
