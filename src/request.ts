@@ -40,6 +40,21 @@ export const getFixtureByDate = async (gDate: Date) => {
   return fixtures
 }
 
+export const getFixtureByDateRange = async (startDate: Date, endDate: Date) => {
+  let fixtures = [];
+  const gameStartDate = DateTime.fromJSDate(startDate).toFormat('yyyy-MM-dd');
+  const gameEndDate = DateTime.fromJSDate(endDate).toFormat('yyyy-MM-dd');
+
+  try {
+    const res = await axios.get(`${webApiUrl}/fixtures/between/${gameStartDate}/${gameEndDate}?${INCL_PARTICIPANTS}&filters=fixtureLeagues:453`, { headers: { "Authorization": t1 } });
+    fixtures = res.data.data;
+  } catch (error) {
+    console.error(error);
+  }
+
+  return fixtures
+}
+
 export const getOddsByFixture = async (id: number, mId: number) => {
   let odds = [];
 

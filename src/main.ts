@@ -1,10 +1,10 @@
 import express from "express";
-import { getFixtureByDate, getOddsByFixture } from './request.js';
+import { getOddsByFixture, getFixtureByDateRange } from './request.js';
 import { get1X2Odds, getBTTSOdds, getOUOdds } from './odds.js';
 import { getPrompt } from './prompt.js';
 // import { SP_Fixture, SP_OddsByFixture } from './types.js'
 
-const allFixtures = await getFixtureByDate(new Date('2023-08-12'));
+const allFixtures = await getFixtureByDateRange(new Date('2023-08-18'), new Date('2023-08-22'));
 const fixturesCount = allFixtures.length;
 
 const gamePrediction = {};
